@@ -1,0 +1,420 @@
+/* <><><><><><><><><><><><
+ 
+  John Broxton
+  http://johnbroxton.com
+  
+  Author: John Broxton
+
+ ><><<><><><><><><><><><> */
+
+/* Fonts */
+
+* {
+  font-family: font-family: 'News Cycle', sans-serif; }
+
+.headings, h1, h2, h3, a {
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 15px;
+  font-style: normal; }
+
+h1 {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 15px; }
+
+h2 {
+  font-weight: 300;
+  font-size: 12px;
+  color: #999999; }
+
+a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #333; }
+
+/* ---------------------------------- */
+/* Animations */
+.default-animation, #bike-nav ul, #bike-nav a.dropdown {
+  -webkit-transition: all 750ms cubic-bezier(0.79, 0, 0.375, 0.995);
+  -moz-transition: all 750ms cubic-bezier(0.79, 0, 0.375, 0.995);
+  -ms-transition: all 750ms cubic-bezier(0.79, 0, 0.375, 0.995);
+  -o-transition: all 750ms cubic-bezier(0.79, 0, 0.375, 0.995);
+  transition: all 750ms cubic-bezier(0.79, 0, 0.375, 0.995); }
+
+/* ---------------------------------- */
+/* Layout */
+body {
+  background: #f5f5f5; }
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  border: 1px solid red; }
+
+/* ---------------------------------- */
+/* Masthead */
+header.masthead {
+  position: absolute;
+  padding: 37.5px 0;
+  background: transparent;
+  z-index: 999;
+  width: 100%; }
+
+header.masthead .titleset {
+  width: 75%;
+  float: left;
+  position: relative;
+  margin: 0 0 0 25px; }
+
+header.masthead .titleset:before {
+  content: '*';
+  position: absolute;
+  top: -4px;
+  text-align: center;
+  font-family: "JanoCycles-Glyphs";
+  display: block;
+  font-size: 30px;
+  color: #000; }
+
+header.masthead .titleset h1,
+header.masthead .titleset h2 {
+  margin: 0 0 0 37.5px; }
+
+header.masthead nav {
+  position: relative;
+  width: 10%;
+  float: right; }
+
+header.masthead nav a {
+  margin-top: 0;
+  float: right;
+  margin-right: 25px; }
+
+/* ---------------------------------- */
+/* Navigation */
+.nav-main {
+  display: block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  text-indent: -9000px;
+  position: relative;
+  margin-right: 25px; }
+
+.nav-main:after {
+  content: 'A';
+  font-family: "JanoCycles-Glyphs";
+  font-size: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  text-indent: 0;
+  text-align: center; }
+
+/* ---------------------------------- */
+/* Image Lockups */
+.lockup-fullscreen img {
+  display: block;
+  width: 100%; }
+
+.lockup-split > div,
+.lockup-split img {
+  display: block;
+  float: left;
+  width: 50%; }
+
+.bike-heading, article header h1, article header h2, article header h3, article header h4, .about h1,
+footer h1, .about h2,
+footer h2 {
+  color: #fff;
+  text-align: center !important;
+  text-transform: uppercase; }
+
+._active .lockup-split {
+  margin-top: 300px;
+  /*300px;*/ }
+
+.lockup-fullscreen,
+.lockup-split {
+  background: rgba(0, 0, 0, 0.1); }
+
+/* ---------------------------------- */
+/* Bikes */
+#bike-nav {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  /*
+  width: $margin*2;
+  height: $margin*2;
+  background: rgba(0,0,0,.50);
+  */
+  z-index: 99999; }
+
+#bike-nav ul {
+  position: absolute;
+  right: 50px;
+  width: 200px;
+  height: 50px;
+  overflow: hidden;
+  opacity: 0; }
+
+#bike-nav ul li {
+  display: block;
+  height: 50px; }
+
+#bike-nav ul li a {
+  display: block;
+  height: 50px;
+  xbackground: rgba(0, 0, 0, 0.1);
+  padding: 0 16.66667px;
+  text-align: right;
+  line-height: 50px;
+  color: #fff; }
+
+#bike-nav ul li a:last-child {
+  padding-bottom: 16.66667px; }
+
+#bike-nav a.dropdown {
+  display: block;
+  font-family: "JanoCycles-Glyphs";
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  float: right; }
+
+#bike-nav:hover ul {
+  opacity: 1; }
+
+#bike-nav:hover a.dropdown {
+  background: rgba(0, 0, 0, 0.75); }
+
+/* ---------------------------------- */
+/* Bike */
+article {
+  position: relative; }
+
+article header {
+  background: #f5f5f5;
+  height: 250px;
+  overflow: hidden;
+  width: 100%;
+  padding: 50px 0 0 0; }
+
+/* ---------------------------------- */
+/* Custom Bike Colors */
+article.bike-01,
+article.bike-01 header {
+  background: #aa4c03; }
+
+article.bike-03,
+article.bike-03 header {
+  background: #2d2621; }
+
+article.bike-04,
+article.bike-04 header {
+  background: #111111; }
+
+article.bike-05,
+article.bike-05 header {
+  background: #617c5a; }
+
+article.bike-06,
+article.bike-06 header {
+  background: #508d98; }
+
+article.about,
+article.about header {
+  background: #111111; }
+
+article .titleset {
+  margin: 0 0 25px 0; }
+
+article .titleset:first-child:after {
+  content: '*';
+  text-align: center;
+  font-family: "JanoCycles-Glyphs";
+  display: block;
+  font-size: 20px;
+  color: #fff; }
+
+article header h1 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 100;
+  letter-spacing: 8px;
+  margin: 0 0 25px 0; }
+
+article header h2 {
+  /*@extend .default-animation;*/
+  font-size: 15px;
+  line-height: 22.5px;
+  letter-spacing: 3px;
+  padding-top: 50px;
+  padding-top: 0;
+  font-weight: bold;
+  opacity: .4; }
+
+article header h3 {
+  font-size: 11.25px;
+  letter-spacing: 3px;
+  margin: 0 0 0 0;
+  opacity: .4; }
+
+article header h4 {
+  font-size: 11.25px;
+  letter-spacing: 3px;
+  font-weight: 100; }
+
+/* ---------------------------------- */
+/* Bike: Scrollable fixed headers; */
+article._active header {
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  width: 100%;
+  z-index: 99; }
+
+article._active header.outro {
+  position: absolute;
+  top: auto;
+  bottom: 0; }
+
+article header.docked h2 {
+  display: none; }
+
+article header.docked h1 {
+  padding-top: 10px;
+  font-size: 18px;
+  letter-spacing: 3px; }
+
+/* ---------------------------------- */
+/* About */
+footer {
+  background: #111;
+  padding: 25px 0; }
+
+.about h2:after,
+footer h2:after {
+  content: '*';
+  font-family: "JanoCycles-Glyphs";
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 25px 0; }
+
+.about h1,
+footer h1 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 100;
+  letter-spacing: 8px;
+  color: #fff;
+  margin: 0 0 12.5px 0;
+  text-align: center; }
+
+.about h2,
+footer h2 {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 100;
+  letter-spacing: 8px;
+  color: #fff;
+  margin: 0 0 25px 0;
+  text-align: center;
+  opacity: 1 !important; }
+
+footer h2 {
+  letter-spacing: 4px; }
+
+.about p,
+footer p {
+  color: #999;
+  display: block;
+  font-family: "aktiv-grotesk-std", "Akzidenz Grotesk", helvetica, arial, sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto 25px auto;
+  text-align: center; }
+
+footer p {
+  margin-bottom: 0; }
+
+.about p.auxlinks,
+footer p.auxlinks {
+  font-size: 11.25px; }
+
+.about p a,
+footer p a {
+  text-transform: none;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-family: inherit;
+  font-size: 11.25px;
+  padding: 0 3px; }
+
+/* ---------------------------------- */
+/* Large Screens */
+@media only screen and (min-width: 1400px) {
+  article header h1 {
+    font-size: 45px; } }
+/* ---------------------------------- */
+/* Devices */
+@media only screen and (max-width: 520px) {
+  h1 span {
+    display: block; }
+
+  header.masthead {
+    padding: 25px 0; }
+
+  header.masthead div {
+    margin: 0 0 0 12.5px; }
+
+  .nav-main {
+    margin-right: 12.5px; }
+
+  article header {
+    position: relative;
+    padding-top: 25px;
+    height: 175px !important; }
+
+  article header h2 {
+    padding-top: 0; }
+
+  article div:nth-child(2) {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    bottom: 25px;
+    margin: 0; }
+
+  article .titleset:nth-child(3) {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    margin: 0;
+    bottom: 25px; }
+
+  article .titleset:first-child:after {
+    opacity: .75; }
+
+  .about header {
+    height: auto !important; }
+
+  #bike-nav {
+    bottom: 12.5px;
+    right: 12.5px;
+    display: none; } }
