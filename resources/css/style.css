@@ -184,7 +184,7 @@ article .titles {
 }
 
 article .titles:first-child:after {
-  content: '&#x25C8;';
+  content: '◈';
   text-align: center;
   display: block;
   font-size: 20px;
