@@ -259,7 +259,7 @@ footer {
 .about h2:after,
 footer h2:after {
   content: '+';
-  font-size: 20px;
+  font-size: 28px;
   color: #fff;
   text-align: center;
   display: block;
