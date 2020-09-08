@@ -39,6 +39,9 @@ h2 {
   padding: 10px;
 }
 
+.compact {
+  letter-spacing: 0px;
+}
 
 a {
   font-size: 12px;
